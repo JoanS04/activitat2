@@ -28,14 +28,19 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(child: SizedBox()),
-              ElevatedButton(onPressed: () => prov.addCounter(), child: Text('+')),
+              ElevatedButton(onPressed: () => prov.addCounter(), child: Text('+', style: TextStyle(fontSize: 30))),
               Expanded(child: SizedBox()),
-              ElevatedButton(onPressed: () => prov.removeCounter(), child: Text('-')),
+              ElevatedButton(onPressed: () => prov.removeCounter(), child: Text('-', style: TextStyle(fontSize: 30))),
               Expanded(child: SizedBox()),
             ],
           )
               ]),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => prov.resetCounter(),
+          child: const Icon(Icons.restart_alt),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

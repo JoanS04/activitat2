@@ -17,4 +17,10 @@ class CounterProvider extends ChangeNotifier{
     Preferences.counter = counter;
     notifyListeners();
   }
+
+  resetCounter() {
+    counter = 0;
+    Preferences.counter = counter;
+    notifyListeners();
+  }
 }
